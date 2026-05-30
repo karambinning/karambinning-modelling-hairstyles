@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelling Hairstyles — Norfolk Street, King's Lynn · since 2007</title>
+<meta name="description" content="Modelling Hairstyles. An independent hair salon at 30A Norfolk Street, King's Lynn — trading since 2007. Cutting, colour, blow-dry, children's hair. Telephone 01553 774711.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1F1611;
+    --cream:#E8DDD3;
+    --paper:#F2EAE0;
+    --mocha:#A47864;
+    --mocha-deep:#6E4B3A;
+    --rule:rgba(31,22,17,.18);
+    --serif:"DM Serif Display", "Source Serif 4", Georgia, serif;
+    --sans:"DM Sans", ui-sans-serif, system-ui;
+    --rhythm:clamp(1rem, .7rem + .8vw, 1.15rem);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:var(--rhythm);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:radial-gradient(rgba(31,22,17,.045) 1px, transparent 1px);
+    background-size:3px 3px;
+    pointer-events:none; z-index:1; opacity:.5;
+  }
+  h1,h2,h3{font-family:var(--serif); font-weight:400; letter-spacing:-.01em; text-wrap:balance; margin:0;}
+  p{text-wrap:pretty; hyphens:auto; margin:0 0 1em}
+  a{color:inherit}
+  a.link{ text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px; transition:opacity .2s;}
+  a.link:hover{opacity:.6}
+
+  /* ── PAGE WRAPPER ─────────────────────────── */
+  .wrap{position:relative; z-index:2; max-width:1440px; margin:0 auto; padding:0 clamp(1.25rem, 3vw, 3rem)}
+
+  /* ── NAV ──────────────────────────────────── */
+  .nav{
+    display:flex; align-items:baseline; justify-content:space-between;
+    padding:clamp(1.1rem,2vw,1.6rem) 0;
+    border-bottom:1px solid var(--rule);
+    font-size:.82rem; letter-spacing:.14em; text-transform:uppercase;
+  }
+  .nav .mark{font-family:var(--serif); font-size:1.15rem; letter-spacing:0; text-transform:none}
+  .nav ul{list-style:none; padding:0; margin:0; display:flex; gap:clamp(.9rem,1.8vw,1.8rem); flex-wrap:wrap; justify-content:flex-end}
+  .nav a{text-decoration:none}
+  .nav a:hover{color:var(--mocha-deep)}
+  .nav .phone-cta{font-variant-numeric:tabular-nums; letter-spacing:.04em}
+
+  /* ── HERO ─────────────────────────────────── */
+  .hero{
+    background:var(--mocha);
+    color:var(--cream);
+    margin:0 calc(50% - 50vw);
+    padding: clamp(3rem,8vw,7rem) clamp(1.5rem,5vw,4rem) clamp(2.5rem,6vw,5rem);
+    position:relative; overflow:hidden;
+  }
+  .hero-inner{ max-width:1440px; margin:0 auto; }
+  .hero .eyebrow{
+    font-size:.78rem; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--cream); opacity:.78; margin-bottom:clamp(1.4rem, 3vw, 2.5rem);
+    display:flex; gap:1.2rem; flex-wrap:wrap; align-items:center;
+  }
+  .hero .eyebrow span{display:inline-flex; gap:.6rem; align-items:center}
+  .hero .eyebrow .dot{width:5px; height:5px; background:var(--cream); border-radius:50%; opacity:.6}
+  .hero h1{
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(3.2rem, 12vw, 11rem);
+    line-height:.92; letter-spacing:-.025em;
+    color:var(--cream);
+  }
+  .hero h1 .it{ display:block; font-style:italic; color:var(--paper) }
+  .hero .lede{
+    margin-top:clamp(2rem,4vw,3rem);
+    max-width:38ch;
+    font-size:clamp(1.05rem,1.2vw + .7rem, 1.35rem);
+    color:var(--cream); opacity:.92;
+    line-height:1.5;
+  }
+  .hero .cta-row{
+    margin-top:clamp(2rem,4vw,3rem);
+    display:flex; flex-wrap:wrap; gap:clamp(.8rem,2vw,1.6rem);
+    align-items:center;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:.6rem;
+    padding:.95rem 1.4rem;
+    background:var(--cream); color:var(--ink);
+    text-decoration:none;
+    font-family:var(--sans); font-weight:500; font-size:.95rem;
+    letter-spacing:.02em;
+    transition:background .2s, transform .15s;
+  }
+  .btn:hover{ background:#fff; transform:translateY(-1px) }
+  .btn--ghost{
+    background:transparent; color:var(--cream);
+    border:1px solid rgba(232,221,211,.45);
+  }
+  .btn--ghost:hover{ background:rgba(232,221,211,.1) }
+
+  /* ── MARQUEE ──────────────────────────────── */
+  .marquee{
+    background:var(--ink); color:var(--paper);
+    margin:0 calc(50% - 50vw);
+    padding: .9rem 0;
+    overflow:hidden;
+    font-family:var(--serif); font-size:clamp(1.1rem, 2vw, 1.6rem);
+    letter-spacing:.01em;
+  }
+  .marquee__track{
+    display:inline-flex; gap:3.2rem; white-space:nowrap;
+    animation: scroll 40s linear infinite;
+    padding-left:3.2rem;
+  }
+  .marquee__track span{display:inline-flex; align-items:center; gap:1.2rem}
+  .marquee__track .sep{ font-style:italic; opacity:.55; font-size:.9em }
+  @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  @media (prefers-reduced-motion: reduce){
+    .marquee__track{ animation-duration:120s }
+  }
+
+  /* ── SECTIONS ─────────────────────────────── */
+  section{ padding: clamp(3.5rem, 7vw, 6.5rem) 0 }
+  .section-label{
+    font-size:.78rem; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--mocha-deep);
+    display:flex; align-items:center; gap:1rem;
+    margin-bottom:clamp(1.5rem,3vw,2.25rem);
+  }
+  .section-label::after{
+    content:""; flex:1; height:1px; background:var(--rule);
+  }
+  h2.display{
+    font-size:clamp(2.2rem, 5vw + .8rem, 4.6rem);
+    line-height:1; letter-spacing:-.02em;
+    max-width:18ch;
+    margin-bottom:clamp(1.5rem,3vw,2.5rem);
+  }
+  h2.display em{ font-style:italic; color:var(--mocha-deep) }
+
+  /* ── ABOUT (cream slab) ───────────────────── */
+  #about{
+    background:var(--cream);
+    margin:0 calc(50% - 50vw);
+    padding: clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem);
+  }
+  #about .inner{ max-width:1440px; margin:0 auto;
+    display:grid; grid-template-columns: 1fr; gap:clamp(2rem,4vw,4rem);
+  }
+  @media (min-width:840px){
+    #about .inner{ grid-template-columns: 7fr 5fr; align-items:start }
+  }
+  #about .copy p{ font-size:clamp(1.05rem,.8rem + .6vw,1.25rem); line-height:1.65; max-width:48ch }
+  #about .copy p + p{ margin-top:1.1em }
+  #about .copy p::first-line{ font-variant:small-caps; letter-spacing:.04em }
+  #about .facts{
+    border-top:1px solid var(--rule);
+    padding-top:1.5rem; font-size:.95rem;
+  }
+  #about .facts dl{ margin:0; display:grid; grid-template-columns:auto 1fr; gap:.65rem 1.5rem }
+  #about .facts dt{
+    font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--mocha-deep); align-self:center;
+  }
+  #about .facts dd{ margin:0; font-family:var(--serif); font-size:1.15rem; line-height:1.25 }
+
+  /* ── SERVICES (paper) ─────────────────────── */
+  .services-list{
+    display:grid; grid-template-columns:1fr; gap:0;
+    border-top:1px solid var(--rule);
+  }
+  .services-list .row{
+    display:grid; grid-template-columns:auto 1fr;
+    gap:clamp(1.5rem,4vw,4rem); align-items:baseline;
+    padding:clamp(1.5rem,2.5vw,2.2rem) 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .services-list .row h3{
+    font-size:clamp(1.55rem,1rem + 1.6vw,2.4rem);
+    line-height:1.05;
+  }
+  .services-list .row h3 .num{
+    font-family:var(--sans);
+    font-size:.7rem; font-weight:500;
+    letter-spacing:.18em;
+    color:var(--mocha-deep);
+    display:block; margin-bottom:.55rem;
+  }
+  .services-list .row p{
+    margin:0; max-width:50ch; color:#3a2c25;
+    font-size:clamp(.95rem,.8rem + .25vw,1.05rem);
+  }
+  @media (min-width:780px){
+    .services-list .row{ grid-template-columns: 18rem 1fr }
+  }
+  .services-foot{
+    margin-top:clamp(1.5rem,3vw,2.5rem);
+    font-size:.92rem; color:var(--mocha-deep);
+    max-width:55ch;
+  }
+
+  /* ── GALLERY (mocha-deep slab) ───────────── */
+  #gallery{
+    background:var(--mocha-deep); color:var(--cream);
+    margin:0 calc(50% - 50vw);
+    padding: clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem);
+  }
+  #gallery .inner{ max-width:1440px; margin:0 auto }
+  #gallery .section-label{ color:var(--cream); opacity:.78 }
+  #gallery .section-label::after{ background:rgba(232,221,211,.25) }
+  #gallery h2.display{ color:var(--cream) }
+  #gallery h2.display em{ color:var(--paper) }
+  #gallery .quote{
+    margin-top:clamp(2.5rem,5vw,4rem);
+    font-family:var(--serif); font-style:italic;
+    font-size:clamp(1.3rem,1rem + 1.2vw,1.95rem);
+    line-height:1.4; max-width:32ch;
+    color:var(--paper);
+  }
+  #gallery .quote::before{ content:"“"; display:block; font-size:3em; line-height:.5; color:rgba(242,234,224,.4); margin-bottom:.3em }
+  #gallery .figure-grid{
+    margin-top:clamp(3rem,5vw,4.5rem);
+    display:grid; gap:clamp(1.2rem,2vw,2rem);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  #gallery .figure{
+    aspect-ratio:4/5;
+    background:rgba(232,221,211,.1);
+    border:1px dashed rgba(232,221,211,.35);
+    display:flex; align-items:flex-end;
+    padding:1.1rem;
+    font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
+    color:rgba(232,221,211,.65);
+    position:relative;
+  }
+  #gallery .figure::before{
+    content:""; position:absolute; left:1.1rem; top:1.1rem;
+    width:1.4rem; height:1px; background:rgba(232,221,211,.5);
+  }
+  #gallery .figure:nth-child(2){ aspect-ratio:1/1 }
+  #gallery .figure:nth-child(3){ aspect-ratio:3/4 }
+  #gallery .figure:nth-child(4){ aspect-ratio:4/5 }
+
+  /* ── CONTACT (cream) ──────────────────────── */
+  #contact{
+    background:var(--cream);
+    margin:0 calc(50% - 50vw);
+    padding: clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem) clamp(3.5rem,6vw,5rem);
+  }
+  #contact .inner{ max-width:1440px; margin:0 auto;
+    display:grid; grid-template-columns:1fr; gap:clamp(2.5rem,5vw,4.5rem);
+  }
+  @media (min-width:880px){ #contact .inner{ grid-template-columns: 5fr 7fr } }
+  #contact h2.display{ margin-bottom:clamp(1.5rem,3vw,2.5rem) }
+  #contact .block + .block{ margin-top:2rem }
+  #contact .label{ font-size:.74rem; letter-spacing:.22em; text-transform:uppercase; color:var(--mocha-deep); margin-bottom:.45rem }
+  #contact .phone{
+    font-family:var(--serif); font-size:clamp(2rem,1.5rem + 1.5vw,2.8rem);
+    letter-spacing:.01em; line-height:1;
+    text-decoration:none; color:var(--ink);
+    border-bottom:1px solid transparent;
+  }
+  #contact .phone:hover{ border-color:var(--ink) }
+  #contact .addr{
+    font-family:var(--serif); font-size:1.4rem; line-height:1.35;
+    font-style:italic; max-width:24ch;
+  }
+  #contact .hours{ display:grid; grid-template-columns:auto 1fr; gap:.45rem 1.5rem; font-size:1.02rem }
+  #contact .hours dt{ font-family:var(--serif); }
+  #contact .hours dd{ margin:0; font-variant-numeric:tabular-nums }
+  #contact .hours .closed{ color:var(--mocha-deep); font-style:italic }
+  #contact .map{
+    width:100%; aspect-ratio:5/4; min-height:280px;
+    border:0; border-radius:0; background:var(--paper);
+    filter:saturate(.85) contrast(.95);
+  }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer{
+    background:var(--ink); color:var(--cream);
+    margin:0 calc(50% - 50vw);
+    padding: clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem) 2.5rem;
+  }
+  footer .inner{ max-width:1440px; margin:0 auto }
+  footer .letterhead{
+    font-family:var(--serif); font-size:clamp(1.6rem,1rem + 1.8vw,2.8rem);
+    line-height:1.25; max-width:24ch;
+    color:var(--cream);
+  }
+  footer .letterhead em{ font-style:italic; color:var(--mocha) }
+  footer .meta{
+    margin-top:clamp(2.5rem,5vw,4rem);
+    padding-top:1.5rem; border-top:1px solid rgba(232,221,211,.25);
+    display:flex; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;
+    font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
+    color:rgba(232,221,211,.7);
+  }
+  footer .meta a{ color:inherit; text-decoration:none }
+  footer .meta a:hover{ color:var(--cream) }
+
+  /* ── SCROLL-DRIVEN REVEAL ────────────────── */
+  @supports (animation-timeline: view()) {
+    .reveal{
+      animation: rise both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+    @keyframes rise {
+      from { opacity:0; transform: translateY(1.4rem) }
+      to   { opacity:1; transform: translateY(0) }
+    }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <nav class="nav" aria-label="Primary">
+    <span class="mark">Modelling Hairstyles</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Visit</a></li>
+      <li><a class="phone-cta" href="tel:+441553774711">01553 774711</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────────────────── -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <div class="eyebrow">
+        <span>Norfolk Street</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>King's Lynn</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Trading since 2007</span>
+      </div>
+      <h1>Modelling <span class="it">Hairstyles.</span></h1>
+      <p class="lede">An independent hair salon at <strong>30A Norfolk Street</strong>, on the same stretch of King's Lynn since October 2007. Cutting, colour and finish — done patiently, in a small room you can hear yourself think in.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+441553774711">Call 01553 774711</a>
+        <a class="btn btn--ghost" href="#contact">Find the door</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ─────────────────────────────────────────── -->
+  <div class="marquee" role="presentation" aria-hidden="true">
+    <div class="marquee__track">
+      <span>30A Norfolk Street, King's Lynn</span><span class="sep">·</span>
+      <span>Mon — Sat, nine 'til five</span><span class="sep">·</span>
+      <span>01553 774711</span><span class="sep">·</span>
+      <span>Established Two Thousand &amp; Seven</span><span class="sep">·</span>
+      <span>PE30 1AL</span><span class="sep">·</span>
+      <span>30A Norfolk Street, King's Lynn</span><span class="sep">·</span>
+      <span>Mon — Sat, nine 'til five</span><span class="sep">·</span>
+      <span>01553 774711</span><span class="sep">·</span>
+      <span>Established Two Thousand &amp; Seven</span><span class="sep">·</span>
+      <span>PE30 1AL</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ───────────────────────────────────────────── -->
+  <section id="about" class="reveal" aria-labelledby="about-h">
+    <div class="inner">
+      <div class="copy">
+        <div class="section-label">01 — About</div>
+        <h2 id="about-h" class="display">A small <em>Norfolk Street</em> salon, kept quiet on purpose.</h2>
+        <p>Modelling Hairstyles has stood in the same place on Norfolk Street since 2007. The shop is small by design — there is room for the chair, the mirror, and the time it takes to do the work properly. People come for a cut and a finish; they tend to come back for the same reason.</p>
+        <p>The point is not novelty. The point is that you sit down, you tell us what you want, and you leave with what you came for. Children are welcome and treated gently. Repeat customers are remembered. The kettle is on.</p>
+      </div>
+      <aside class="facts" aria-label="At a glance">
+        <dl>
+          <dt>Trading since</dt><dd>October 2007</dd>
+          <dt>Where</dt><dd>30A Norfolk Street<br>King's Lynn · PE30 1AL</dd>
+          <dt>Telephone</dt><dd><a class="link" href="tel:+441553774711">01553&nbsp;774711</a></dd>
+          <dt>Open</dt><dd>Mon — Sat<br>09:00 — 17:00</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ────────────────────────────────────────── -->
+  <section id="services" aria-labelledby="services-h">
+    <div class="section-label">02 — In the chair</div>
+    <h2 id="services-h" class="display">Honest hairdressing, <em>without the spa-menu language.</em></h2>
+
+    <div class="services-list reveal">
+      <article class="row">
+        <h3><span class="num">i.</span>Cutting</h3>
+        <p>Ladies', gents' and children's cuts. A consultation first — what grows where, what behaves, what you actually want when you wake up on Wednesday.</p>
+      </article>
+      <article class="row">
+        <h3><span class="num">ii.</span>Colour &amp; highlights</h3>
+        <p>Full colour, root retouch, highlights and lowlights. Skin tests for first-time clients as a matter of course. Bring a reference photo if you have one.</p>
+      </article>
+      <article class="row">
+        <h3><span class="num">iii.</span>Blow-dry &amp; finish</h3>
+        <p>Wash, blow-dry and finish for everyday or for an evening out. Twenty minutes longer than you think is the time it takes to do it well.</p>
+      </article>
+      <article class="row">
+        <h3><span class="num">iv.</span>Children's hair</h3>
+        <p>First cuts and regular trims, calmly. We work at the child's pace, not the clock's. Parents are welcome to sit alongside.</p>
+      </article>
+      <article class="row">
+        <h3><span class="num">v.</span>Restyling</h3>
+        <p>If you have decided the time has come for a change, sit down for a proper conversation. We will not rush you, and we will say so if your idea will not suit.</p>
+      </article>
+    </div>
+
+    <p class="services-foot">Prices are quoted in the chair before the work begins — every head is different, and we would rather agree the cost with you in person than print a guess on a website. Call <a class="link" href="tel:+441553774711">01553 774711</a> for an estimate or to book.</p>
+  </section>
+
+  <!-- ── GALLERY ─────────────────────────────────────────── -->
+  <section id="gallery" class="reveal" aria-labelledby="gallery-h">
+    <div class="inner">
+      <div class="section-label">03 — Gallery</div>
+      <h2 id="gallery-h" class="display">Photographs <em>in progress.</em></h2>
+
+      <p class="quote">Until the camera turns up, the work will have to speak for itself — in the chair, in the mirror, on the way home.</p>
+
+      <div class="figure-grid" aria-label="Gallery placeholders">
+        <div class="figure">Cut · plate i</div>
+        <div class="figure">Colour · plate ii</div>
+        <div class="figure">Finish · plate iii</div>
+        <div class="figure">Detail · plate iv</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ─────────────────────────────────────────── -->
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="inner">
+      <div>
+        <div class="section-label">04 — Visit</div>
+        <h2 id="contact-h" class="display">Norfolk Street, <em>King's Lynn.</em></h2>
+
+        <div class="block">
+          <div class="label">Telephone</div>
+          <a class="phone" href="tel:+441553774711">01553 774711</a>
+        </div>
+
+        <div class="block">
+          <div class="label">Address</div>
+          <p class="addr">30A Norfolk Street<br>King's Lynn, Norfolk<br>PE30 1AL</p>
+        </div>
+
+        <div class="block">
+          <div class="label">Opening hours</div>
+          <dl class="hours">
+            <dt>Monday</dt><dd>09:00 — 17:00</dd>
+            <dt>Tuesday</dt><dd>09:00 — 17:00</dd>
+            <dt>Wednesday</dt><dd>09:00 — 17:00</dd>
+            <dt>Thursday</dt><dd>09:00 — 17:00</dd>
+            <dt>Friday</dt><dd>09:00 — 17:00</dd>
+            <dt>Saturday</dt><dd>09:00 — 17:00</dd>
+            <dt>Sunday</dt><dd class="closed">Closed</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div>
+        <iframe
+          class="map"
+          title="Map · 30A Norfolk Street, King's Lynn, PE30 1AL"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=0.39574%2C52.75478%2C0.40179%2C52.75643&amp;layer=mapnik&amp;marker=52.7556028%2C0.398764">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer>
+  <div class="inner">
+    <p class="letterhead">
+      <em>Modelling Hairstyles.</em><br>
+      30A Norfolk Street,<br>
+      King's Lynn, PE30 1AL.<br>
+      Telephone <a class="link" href="tel:+441553774711">01553 774711</a>.<br>
+      Established 2007.
+    </p>
+    <div class="meta">
+      <span>© Modelling Hairstyles Ltd · King's Lynn</span>
+      <span><a href="#">Back to top</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
